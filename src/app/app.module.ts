@@ -10,7 +10,9 @@ import {FooterComponent} from './LayOuts/footer/footer.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AngularMaterialModule} from './angular-material.module';
 import {PrimeNgModule} from './prime-ng.module';
-import { CountUpModule } from 'ngx-countup';
+import {CountUpModule} from 'ngx-countup';
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,7 @@ import { CountUpModule } from 'ngx-countup';
     AppRoutingModule,
     AngularMaterialModule,
     PrimeNgModule,
+    HttpClientModule,
     CountUpModule,
     BrowserAnimationsModule
   ],

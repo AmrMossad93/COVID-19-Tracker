@@ -6,17 +6,20 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      <app-card [header]="'Infected'" [textColorClassName]="'text-info'" [number]="50" [date]="'Sun Apr 12 2020'"
+      <app-card [header]="'Infected'" [textColorClassName]="'text-info'" [number]="data?.confirmed.value"
+                [date]="data?.lastUpdate | date"
                 [paragraph]="'Number Of Active Cases Of COVID-19.'"
                 [borderColorClassName]="'border-info'"></app-card>
     </div>
     <div class="col-md-4">
-      <app-card [header]="'Recovered'" [textColorClassName]="'text-success'" [number]="50" [date]="'Sun Apr 12 2020'"
+      <app-card [header]="'Recovered'" [textColorClassName]="'text-success'" [number]="data?.recovered.value"
+                [date]="data?.lastUpdate | date"
                 [paragraph]="'Number Of Recoveries Cases Of COVID-19.'"
                 [borderColorClassName]="'border-success'"></app-card>
     </div>
     <div class="col-md-4">
-      <app-card [header]="'Deaths'" [textColorClassName]="'text-danger'" [number]="50" [date]="'Sun Apr 12 2020'"
+      <app-card [header]="'Deaths'" [textColorClassName]="'text-danger'" [number]="data?.deaths.value"
+                [date]="data?.lastUpdate | date"
                 [paragraph]="'Number Of Deaths Caused By COVID-19.'"
                 [borderColorClassName]="'border-danger'"></app-card>
     </div>
