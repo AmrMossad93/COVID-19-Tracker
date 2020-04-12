@@ -1,1 +1,8 @@
-<p>card works!</p>
+<div class="card {{borderColorClassName}} mb-3 text-center">
+  <div class="card-header  {{textColorClassName}}">{{header}}</div>
+  <div class="card-body {{textColorClassName}}">
+    <h1 class="card-title" [countUp]="number">0</h1>
+    <h5 class="card-title text-muted">{{date}}</h5>
+    <p class="card-text">{{paragraph}}</p>
+  </div>
+</div>

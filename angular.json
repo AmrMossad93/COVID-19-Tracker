@@ -30,7 +30,9 @@
               "node_modules/primeicons/primeicons.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/Tools/JS/Counter/jquery.counterup.min.js"
+            ]
           },
           "configurations": {
             "production": {
