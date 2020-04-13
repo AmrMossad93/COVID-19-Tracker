@@ -16,4 +16,8 @@ export class CoronaService {
   getGlobalData() {
     return this.dataService.get('api/daily');
   }
+
+  getCountries() {
+    return this.dataService.get('api/countries');
+  }
 }

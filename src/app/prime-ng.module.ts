@@ -1,16 +1,18 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ChartModule} from 'primeng';
-
+import {AutoCompleteModule} from 'primeng/autocomplete';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    ChartModule
+    ChartModule,
+    AutoCompleteModule
   ],
   exports: [
-    ChartModule
+    ChartModule,
+    AutoCompleteModule
   ]
 })
 export class PrimeNgModule {

@@ -12,6 +12,10 @@ import {AngularMaterialModule} from './angular-material.module';
 import {PrimeNgModule} from './prime-ng.module';
 import {CountUpModule} from 'ngx-countup';
 import {HttpClientModule} from '@angular/common/http';
+import {MatOptionModule} from '@angular/material/core';
+import { GlobalComponent } from './Components/global/global.component';
+import { CountryComponent } from './Components/country/country.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,9 @@ import {HttpClientModule} from '@angular/common/http';
     HomePageComponent,
     CardComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    GlobalComponent,
+    CountryComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,10 @@ import {HttpClientModule} from '@angular/common/http';
     PrimeNgModule,
     HttpClientModule,
     CountUpModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatOptionModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

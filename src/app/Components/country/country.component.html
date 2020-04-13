@@ -1,20 +1,24 @@
-<div class="container-fluid">
-  <div class="jumbotron text-center">
-    <img src="assets/Tools/Images/COVID-19/image.png" class="text-center img-fluid" alt="COVID-19">
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form>
+        <mat-form-field class="example-full-width">
+          <input type="text"
+                 placeholder="Pick The Country"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="myControl"
+                 [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+    </div>
   </div>
-
-  <mat-tab-group mat-align-tabs="center">
-    <mat-tab label="Global">
-      <app-global></app-global>
-    </mat-tab>
-    <mat-tab label="Country">
-      <app-country></app-country>
-    </mat-tab>
-  </mat-tab-group>
-</div>
-
-
-<!--<div class="container">-->
 <!--  <div class="row">-->
 <!--    <div class="col-md-4">-->
 <!--      <app-card [header]="'Infected'" [textColorClassName]="'text-info'" [number]="data?.confirmed.value"-->
@@ -35,10 +39,8 @@
 <!--                [borderColorClassName]="'border-danger'"></app-card>-->
 <!--    </div>-->
 <!--  </div>-->
+</div>
 
-<!--  <div class="row">-->
-<!--    <div class="col-md-12">-->
-<!--      <p-chart type="line" [data]="chartData"></p-chart>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
+
+<!--Final -->
+<!--<div *ngFor="let x of countries?.countries">{{x.name}}</div>-->
