@@ -13,10 +13,8 @@ import {PrimeNgModule} from './prime-ng.module';
 import {CountUpModule} from 'ngx-countup';
 import {HttpClientModule} from '@angular/common/http';
 import {MatOptionModule} from '@angular/material/core';
-import { GlobalComponent } from './Components/global/global.component';
-import { CountryComponent } from './Components/country/country.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { CountryPageComponent } from './Pages/country-page/country-page.component';
+import {CountryPageComponent} from './Pages/country-page/country-page.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +23,6 @@ import { CountryPageComponent } from './Pages/country-page/country-page.componen
     CardComponent,
     NavbarComponent,
     FooterComponent,
-    GlobalComponent,
-    CountryComponent,
     CountryPageComponent
   ],
   imports: [
