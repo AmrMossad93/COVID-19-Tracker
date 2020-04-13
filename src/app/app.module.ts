@@ -16,6 +16,7 @@ import {MatOptionModule} from '@angular/material/core';
 import { GlobalComponent } from './Components/global/global.component';
 import { CountryComponent } from './Components/country/country.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CountryPageComponent } from './Pages/country-page/country-page.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     GlobalComponent,
-    CountryComponent
+    CountryComponent,
+    CountryPageComponent
   ],
   imports: [
     BrowserModule,

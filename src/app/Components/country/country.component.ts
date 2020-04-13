@@ -4,6 +4,7 @@ import {ICountry} from '../../Models/country';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import {ICorona} from '../../Models/corona';
 
 @Component({
   selector: 'app-country',

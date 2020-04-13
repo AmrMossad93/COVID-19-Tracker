@@ -1,44 +1,42 @@
-<div class="container-fluid">
-  <div class="jumbotron text-center">
-    <img src="assets/Tools/Images/COVID-19/image.png" class="text-center img-fluid" alt="COVID-19">
-  </div>
 
+<div class="container">
   <mat-tab-group mat-align-tabs="center">
-    <mat-tab label="Global">
-      <app-global></app-global>
+    <mat-tab label="Details">
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <app-card [header]="'Infected'" [textColorClassName]="'text-info'" [number]="data?.confirmed.value"
+                      [date]="data?.lastUpdate | date"
+                      [paragraph]="'Number Of Active Cases Of COVID-19.'"
+                      [borderColorClassName]="'border-info'"></app-card>
+          </div>
+          <div class="col-md-4">
+            <app-card [header]="'Recovered'" [textColorClassName]="'text-success'" [number]="data?.recovered.value"
+                      [date]="data?.lastUpdate | date"
+                      [paragraph]="'Number Of Recoveries Cases Of COVID-19.'"
+                      [borderColorClassName]="'border-success'"></app-card>
+          </div>
+          <div class="col-md-4">
+            <app-card [header]="'Deaths'" [textColorClassName]="'text-danger'" [number]="data?.deaths.value"
+                      [date]="data?.lastUpdate | date"
+                      [paragraph]="'Number Of Deaths Caused By COVID-19.'"
+                      [borderColorClassName]="'border-danger'"></app-card>
+          </div>
+        </div>
+      </div>
     </mat-tab>
-    <mat-tab label="Country">
-      <app-country></app-country>
+    <mat-tab label="Charts">
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p-chart type="line" [data]="chartData"></p-chart>
+          </div>
+        </div>
+      </div>
+
     </mat-tab>
   </mat-tab-group>
 </div>
 
-
-<!--<div class="container">-->
-<!--  <div class="row">-->
-<!--    <div class="col-md-4">-->
-<!--      <app-card [header]="'Infected'" [textColorClassName]="'text-info'" [number]="data?.confirmed.value"-->
-<!--                [date]="data?.lastUpdate | date"-->
-<!--                [paragraph]="'Number Of Active Cases Of COVID-19.'"-->
-<!--                [borderColorClassName]="'border-info'"></app-card>-->
-<!--    </div>-->
-<!--    <div class="col-md-4">-->
-<!--      <app-card [header]="'Recovered'" [textColorClassName]="'text-success'" [number]="data?.recovered.value"-->
-<!--                [date]="data?.lastUpdate | date"-->
-<!--                [paragraph]="'Number Of Recoveries Cases Of COVID-19.'"-->
-<!--                [borderColorClassName]="'border-success'"></app-card>-->
-<!--    </div>-->
-<!--    <div class="col-md-4">-->
-<!--      <app-card [header]="'Deaths'" [textColorClassName]="'text-danger'" [number]="data?.deaths.value"-->
-<!--                [date]="data?.lastUpdate | date"-->
-<!--                [paragraph]="'Number Of Deaths Caused By COVID-19.'"-->
-<!--                [borderColorClassName]="'border-danger'"></app-card>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--  <div class="row">-->
-<!--    <div class="col-md-12">-->
-<!--      <p-chart type="line" [data]="chartData"></p-chart>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->

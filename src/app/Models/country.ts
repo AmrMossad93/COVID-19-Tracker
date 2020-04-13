@@ -1,3 +1,5 @@
+import {ICountryTwo} from './country-two';
+
 export interface ICountry {
-  name: string;
+  countries: ICountryTwo[];
 }

@@ -20,4 +20,8 @@ export class CoronaService {
   getCountries() {
     return this.dataService.get('api/countries');
   }
+
+  getCoronaDetailsByName(Country: string) {
+    return this.dataService.get('api/countries/' + Country);
+  }
 }
