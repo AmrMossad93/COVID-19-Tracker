@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {ThemeService} from '../../Services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  language: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private themeService: ThemeService) {
+    this.language = localStorage.getItem('language');
   }
 
+
+  ngOnInit(): void {
+    this.language = localStorage.getItem('language');
+    if (this.language === '') {
+      this.themeService.enableEnglishMood();
+      localStorage.setItem('language', 'en');
+    }
+  }
+
+
+  enableLanguage(language?: string) {
+    if (language === 'ar') {
+      this.themeService.enableArabicMood();
+      localStorage.setItem('language', 'ar');
+    } else {
+      this.themeService.enableEnglishMood();
+      localStorage.setItem('language', 'en');
+    }
+  }
 }

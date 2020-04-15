@@ -12,7 +12,7 @@ export class HomePageComponent implements OnInit {
   data: ICorona;
   globalChartData = {} as IGlobal[];
   chartData: any;
-
+  panelOpenState = false;
   constructor(private coronaService: CoronaService) {
   }
 
@@ -40,6 +40,7 @@ export class HomePageComponent implements OnInit {
   callChart() {
     this.chartData = {
       labels: this.globalChartData.map(c => c.reportDate),
+      responsive: true,
       datasets: [
         {
           label: 'Infected',

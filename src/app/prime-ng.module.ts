@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ChartModule} from 'primeng';
+import {ChartModule, FieldsetModule} from 'primeng';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 
 @NgModule({
@@ -8,11 +8,13 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
   imports: [
     CommonModule,
     ChartModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    FieldsetModule
   ],
   exports: [
     ChartModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    FieldsetModule
   ]
 })
 export class PrimeNgModule {
