@@ -6,7 +6,7 @@ import {ThemeService} from '../../Services/theme.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnChanges {
   language: string;
 
   constructor(private themeService: ThemeService) {
@@ -22,6 +22,11 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    this.language = localStorage.getItem('language');
+    console.log(this.language);
+  }
+
 
   enableLanguage(language?: string) {
     if (language === 'ar') {
@@ -31,5 +36,7 @@ export class NavbarComponent implements OnInit {
       this.themeService.enableEnglishMood();
       localStorage.setItem('language', 'en');
     }
+    console.log(language);
   }
+
 }
