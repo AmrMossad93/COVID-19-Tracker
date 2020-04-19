@@ -17,6 +17,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CountryPageComponent} from './Pages/country-page/country-page.component';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { SectionComponent } from './Components/section/section.component';
+import { TestComponent } from './Pages/test/test.component';
+import { GlowingGradientCardComponent } from './Widgets/glowing-gradient-card/glowing-gradient-card.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -30,7 +33,10 @@ export function createTranslateLoader(http: HttpClient) {
     CardComponent,
     NavbarComponent,
     FooterComponent,
-    CountryPageComponent
+    CountryPageComponent,
+    SectionComponent,
+    TestComponent,
+    GlowingGradientCardComponent
   ],
   imports: [
     BrowserModule,
