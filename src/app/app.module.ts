@@ -20,6 +20,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { SectionComponent } from './Components/section/section.component';
 import { TestComponent } from './Pages/test/test.component';
 import { GlowingGradientCardComponent } from './Widgets/glowing-gradient-card/glowing-gradient-card.component';
+import { ProgressCardComponent } from './Widgets/progress-card/progress-card.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -36,7 +37,8 @@ export function createTranslateLoader(http: HttpClient) {
     CountryPageComponent,
     SectionComponent,
     TestComponent,
-    GlowingGradientCardComponent
+    GlowingGradientCardComponent,
+    ProgressCardComponent
   ],
   imports: [
     BrowserModule,
