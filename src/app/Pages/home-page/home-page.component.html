@@ -1,6 +1,6 @@
 <div class="container">
   <mat-tab-group mat-align-tabs="center">
-    <mat-tab label="Global Details">
+    <mat-tab label="{{'Global Details' | translate}}">
       <br>
       <div class="container">
         <div class="row">
@@ -10,19 +10,21 @@
                                   [iconClassName]="'fab fa-accessible-icon'"></app-discribtion-card>
           </div>
           <div class="col-md-4">
-            <app-discribtion-card [header]="'Recovered'" [textColorClassName]="'success'" [date]="data?.lastUpdate | date"
+            <app-discribtion-card [header]="'Recovered'" [textColorClassName]="'success'"
+                                  [date]="data?.lastUpdate | date"
                                   [paragraph]="'Number Of Active Cases Of COVID-19.'" [number]="data?.recovered.value"
                                   [iconClassName]="'fas fa-notes-medical'"></app-discribtion-card>
           </div>
           <div class="col-md-4">
-            <app-discribtion-card [header]="'Deaths'" [textColorClassName]="'danger'" [date]="data?.lastUpdate | date"
-                                  [paragraph]="'Number Of Deaths Caused By COVID-19.'" [number]="data?.deaths.value"
+            <app-discribtion-card [header]="'Deaths'" [textColorClassName]="'danger'" [date]="data?.lastUpdate | date" [paragraphAr]="'عدد الوفيات التي تسببت فيها COVID-19'"
+                                  [paragraph]="'Number Of Deaths Caused By COVID-19.' | translate"
+                                  [number]="data?.deaths.value"
                                   [iconClassName]="'fas fa-skull-crossbones'"></app-discribtion-card>
           </div>
         </div>
       </div>
     </mat-tab>
-    <mat-tab label="Global Charts">
+    <mat-tab label="{{'Global Stats' | translate}}">
       <br>
       <p-chart type="line" [data]="chartData"></p-chart>
     </mat-tab>

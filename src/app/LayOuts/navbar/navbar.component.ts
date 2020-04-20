@@ -24,7 +24,6 @@ export class NavbarComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     this.language = localStorage.getItem('language');
-    console.log(this.language);
   }
 
 
@@ -36,7 +35,6 @@ export class NavbarComponent implements OnInit, OnChanges {
       this.themeService.enableEnglishMood();
       localStorage.setItem('language', 'en');
     }
-    console.log(language);
   }
 
 }

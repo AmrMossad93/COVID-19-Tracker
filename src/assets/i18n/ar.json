@@ -1,4 +1,8 @@
 {
   "Country": "بلد",
-  "Global": "شامل"
+  "Global": "شامل",
+  "Global Details": "التفاصيل العالمية",
+  "Global Stats": "الإحصائيات العالمية",
+  "Number Of Deaths Caused By COVID-19": "عدد الوفيات التي تسببت فيها COVID-19",
+  "Language": "اللغة"
 }
