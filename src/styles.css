@@ -7,6 +7,7 @@
   margin: 0;
   box-sizing: border-box;
   outline: none;
+  font-size: 16px;
   font-family: 'Baloo Paaji 2', 'Cairo', cursive;
 }
 
@@ -15,7 +16,7 @@ html, body {
 }
 
 body {
-  background: #010615;
+  background: #f4f4f4;
 }
 
 .mat-card {
@@ -27,19 +28,19 @@ body {
   background: #f4f4f4;
 }
 
-.mat-tab-label .mat-tab-label-content {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  color: #fff;
-}
+/*.mat-tab-label .mat-tab-label-content {*/
+/*  display: inline-flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  white-space: nowrap;*/
+/*  color: #fff;*/
+/*}*/
 
 [dir=rtl] .mat-form-field {
   text-align: right;
 }
 
-.jumbotron {
-  color: #FFFFFF;
-  background-color: transparent !important;
-}
+/*.jumbotron {*/
+/*  color: #FFFFFF;*/
+/*  background-color: transparent !important;*/
+/*}*/
