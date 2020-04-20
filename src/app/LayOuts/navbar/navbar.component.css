@@ -1,14 +1,15 @@
 .navbar-light .navbar-nav .nav-link {
-  color: #F7921C;
+  color: rgba(247, 146, 28, .7);
   font-size: 20px;
   font-weight: 900;
 }
 
 .navbar-light .navbar-text {
-  color: #36D4C1;
+  color: rgba(54, 212, 193, .7);
   font-size: 20px;
   font-weight: 900;
 }
-.active a{
+
+.active a {
   color: #6D2671 !important;
 }

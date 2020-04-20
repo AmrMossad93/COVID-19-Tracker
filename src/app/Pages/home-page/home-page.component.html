@@ -5,22 +5,19 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <app-card [header]="'Infected'" [textColorClassName]="'text-info'" [number]="data?.confirmed.value"
-                      [date]="data?.lastUpdate | date"
-                      [paragraph]="'Number Of Active Cases Of COVID-19.'"
-                      [borderColorClassName]="'border-info'"></app-card>
+            <app-discribtion-card [header]="'Infected'" [textColorClassName]="'info'" [date]="data?.lastUpdate | date"
+                                  [paragraph]="'Number Of Active Cases Of COVID-19.'" [number]="data?.confirmed.value"
+                                  [iconClassName]="'fab fa-accessible-icon'"></app-discribtion-card>
           </div>
           <div class="col-md-4">
-            <app-card [header]="'Recovered'" [textColorClassName]="'text-success'" [number]="data?.recovered.value"
-                      [date]="data?.lastUpdate | date"
-                      [paragraph]="'Number Of Recoveries Cases Of COVID-19.'"
-                      [borderColorClassName]="'border-success'"></app-card>
+            <app-discribtion-card [header]="'Recovered'" [textColorClassName]="'success'" [date]="data?.lastUpdate | date"
+                                  [paragraph]="'Number Of Active Cases Of COVID-19.'" [number]="data?.recovered.value"
+                                  [iconClassName]="'fas fa-notes-medical'"></app-discribtion-card>
           </div>
           <div class="col-md-4">
-            <app-card [header]="'Deaths'" [textColorClassName]="'text-danger'" [number]="data?.deaths.value"
-                      [date]="data?.lastUpdate | date"
-                      [paragraph]="'Number Of Deaths Caused By COVID-19.'"
-                      [borderColorClassName]="'border-danger'"></app-card>
+            <app-discribtion-card [header]="'Deaths'" [textColorClassName]="'danger'" [date]="data?.lastUpdate | date"
+                                  [paragraph]="'Number Of Deaths Caused By COVID-19.'" [number]="data?.deaths.value"
+                                  [iconClassName]="'fas fa-skull-crossbones'"></app-discribtion-card>
           </div>
         </div>
       </div>

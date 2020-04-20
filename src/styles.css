@@ -28,9 +28,11 @@ body {
   border-radius: 4px;
   background: #f4f4f4;
 }
+
 .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
   background-color: #F7921C;
 }
+
 /*.mat-tab-label .mat-tab-label-content {*/
 /*  display: inline-flex;*/
 /*  justify-content: center;*/
@@ -44,7 +46,10 @@ body {
   align-items: center;
   white-space: nowrap;
   color: #551E58;
+  font-size: 20px;
+  font-weight: 700;
 }
+
 [dir=rtl] .mat-form-field {
   text-align: right;
 }

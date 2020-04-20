@@ -21,6 +21,7 @@ import { SectionComponent } from './Components/section/section.component';
 import { TestComponent } from './Pages/test/test.component';
 import { GlowingGradientCardComponent } from './Widgets/glowing-gradient-card/glowing-gradient-card.component';
 import { ProgressCardComponent } from './Widgets/progress-card/progress-card.component';
+import { DiscribtionCardComponent } from './Widgets/discribtion-card/discribtion-card.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -38,7 +39,8 @@ export function createTranslateLoader(http: HttpClient) {
     SectionComponent,
     TestComponent,
     GlowingGradientCardComponent,
-    ProgressCardComponent
+    ProgressCardComponent,
+    DiscribtionCardComponent
   ],
   imports: [
     BrowserModule,
