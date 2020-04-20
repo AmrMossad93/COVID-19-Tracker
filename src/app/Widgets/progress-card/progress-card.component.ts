@@ -1,18 +1,21 @@
-import {Component, OnInit} from '@angular/core';
-import {element} from 'protractor';
+import {Component, Inject, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'app-progress-card',
   templateUrl: './progress-card.component.html',
-  styleUrls: ['./progress-card.component.css']
+  styleUrls: ['./progress-card.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ProgressCardComponent implements OnInit {
+  @Input() progressBar: number;
 
-  constructor() {
+  constructor(@Inject(DOCUMENT) private document: Document) {
   }
 
   ngOnInit(): void {
-    document.querySelector('body').style.cssText = '--width: 20%';
+    this.document.querySelector('body').style.cssText = `--width: ${this.progressBar}`;
+    console.log(`--width: ${this.progressBar}`);
   }
 
 }
